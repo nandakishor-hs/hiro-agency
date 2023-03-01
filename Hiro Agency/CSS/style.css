@@ -1,0 +1,350 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background: white;
+    color: #fff;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.left-box{
+    flex-basis: 70%;
+    background: #fff;
+}
+nav{
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+    margin-left: 15%;
+}
+.info{
+    margin-left: 20%;
+    margin-top: 15%;
+}
+.info h1{
+    font-size: 50px;
+    color: #222;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.info p{
+    line-height: 28px;
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation-delay: 0.5s;
+}
+.info a{
+    padding: 10px 18px;
+    text-decoration: none;
+    color: #222;
+    display: inline-block;
+    margin: 22px 0;
+    font-weight: bolder;
+    margin-left: -17px;
+    animation-delay: 1s;
+}
+.info a::before{
+    content: "";
+    position: absolute;
+    background-color: aqua;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;  
+    margin: auto;
+    display: block;
+}
+.info a:hover::before{
+    width: 100%;
+    transition: width 0.25s ease-out;
+}
+.img-box{
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    bottom: 85px;
+    right: 100px;
+    left: 450px;  
+}
+.img-box.anim{
+    animation-delay: 2s;
+}
+.img-box img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+.social-links{
+    margin-left: 20%;
+    margin-top: 20px;
+}
+ul{
+    width: 30rem;
+    display: flex;
+    align-items: center;;
+}
+.social-links.anim{
+    animation-delay: 1.5s;
+}
+.social-links a{
+    font-weight: bolder;
+    color: #222;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.right-box{
+    flex-basis: 30%;
+    background: #222;
+}
+.ham{
+    position: absolute;
+    margin-left: 250px;
+    width: 20px;
+    padding: 20px 0;
+}
+.featured{
+    width: 100%;
+    height: 80vh;
+    background: aqua;
+}
+.info1{
+    margin-left: 14%;
+    margin-top: 0%;
+    padding-top: 10%;
+}
+.info1 h1{
+    font-size: 50px;
+    color: #222;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation-delay: 0.5s;
+}
+.info1 p{
+    line-height: 28px;
+    color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    animation-delay: 0.5s;
+}
+.pattern{
+    position: absolute;
+    left: 400px;
+    width: 500px;
+    bottom: -150px;
+    animation-delay: 0.5s;
+}
+.pattern img{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 650px;
+}
+.para1{
+    padding-left: 790px;
+    color: #000;
+    font-weight: lighter;
+    line-height: 28px;
+    animation-delay: 0.5s;
+}
+.our-services{
+    width: 100%;
+    height: 100vh;
+    color: #000;
+}
+.our-services h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: x-large;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 40px;
+}
+.our-services p{
+    text-align: center;
+    padding-top: 40px;
+}
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+.service{
+    margin: 10px;
+    overflow: hidden;
+    padding: 35px 15px;
+    position: relative;
+    text-align: center;
+    transition: background-color 0.3s ease-in, transform 0.3s ease-in;
+    width: 200px;
+}
+.service:hover{
+    background-color: #e14460;
+    transform: translateY(-3px);
+}
+.service::before{
+    content: "";
+    border-width: 20px;
+    border-color: #222f3e #222f3e rgba(1,1,1,0.4) rgba(0,0,0,0.4);
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    transition: right 0.3s ease-out, top 0.3s ease-out;
+}
+.service:hover::before{
+    right: 0;
+    top: 0;
+}
+.description{
+    line-height: 1.55rem;
+    margin: 0;
+    transition: color 0.3s ease-out;
+}
+.service:hover.description{
+    color: #fff;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+.team{
+    padding: 100px 0;
+    background: #000;
+}
+.team-head{
+    text-align: center;
+    padding-bottom: 60px;
+}
+.team-head-h1{
+    font-size: 50px;
+}
+.team-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-gap: 30px
+}
+.team-item{
+    background-color: hsl(260, 10%, 10%);
+}
+.team-img{
+    position: relative;
+    overflow: hidden;
+}
+.team-img img{
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.5s ease;
+}
+.team-item:hover .team-img img{
+    transform: scale(1.1);
+    filter: brightness(60%) grayscale(100%);
+}
+.team-item:hover{
+    transform: translateX(0) rotate(0);
+}
+.team-text{
+    padding: 20px 15px;
+    text-align: center;
+}
+.team-text h3{
+    color: hsl(187, 67%, 51%);
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+.team-text p{
+    font-size: 16px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+.conclude{
+    width: 100%;
+    height: 40vh;
+    background: aqua;
+    color: #000;
+} 
+.outro{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5%;
+}
+.conclude-heading{
+   font-size: 50px;
+   margin-left: 14px;
+   animation-delay: 1s; 
+}
+.conclude-para{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 28px;
+    font-style: oblique;
+    animation-delay: 1s;
+}
+.footer{
+    height: 40vh;
+    width: 100%;
+    color: #000;
+}
+.ftr-head{
+    margin-left: 14%;
+    margin-top: 0%;
+    padding-top: 6%;
+}
+.ftr-h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation-delay: 1s;
+}
+.ftr-h3{
+    font-style: oblique;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation-delay: 0.5s;
+}
+.ftr-para1{
+    margin-left: 14%;
+    margin-top: 4%;
+    line-height: 28px;
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation-delay: 1.5s;
+}
+.ftr-para2{
+    margin-left: 14%;
+    margin-top: 4%;
+    line-height: 28px;
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation-delay: 1.5s;
+}
+.paragraph{
+    display: flex;
+}
+
